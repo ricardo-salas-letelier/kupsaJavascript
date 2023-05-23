@@ -1,0 +1,47 @@
+/*--Cuerpo nosotros--*/
+/*********************/
+.secNosotros {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+    "secNosotrosImg secNosotrosTxt";  
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    align-items:center;
+    column-gap: 50px;
+
+    .secNosotrosImg {
+        grid-area: secNosotrosImg;
+
+        img {
+            width: 100%;
+        }
+    }
+    .secNosotrosTxt {
+        grid-area: secNosotrosTxt;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+
+        blockquote {
+            font-size: xx-large;
+            padding-left: 10px;
+            border-left: solid #737272;
+        }
+    }
+}
+.secEquipo {
+    margin-top: 100px;
+
+    .secNosotros__titulo {
+        text-align: center;
+        font-size: x-large;
+        margin: auto;
+        width: 50%;
+    }
+}
+
+

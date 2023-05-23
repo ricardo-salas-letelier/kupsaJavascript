@@ -1,0 +1,78 @@
+/*--Pie--*/
+/*********/
+.pieGrid {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+    "pieImagen pieDetalles"
+    "pieTexto  pieDetalles";    
+    grid-template-columns: 3fr 8fr;
+    justify-content: stretch;
+    align-items: stretch;
+
+    .pieImagen {
+        grid-area: pieImagen;
+        justify-self: start;
+
+        img {
+            width: 30%;
+            padding: 1%;
+            justify-self: start;
+        }
+    }
+    .pieTexto {
+        grid-area: pieTexto;
+    }
+    .pieDetalles {
+        grid-area: pieDetalles;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 20px;
+    
+        .pieEmpresa {
+            padding: 3px;
+            width: 25%;
+        }
+        .pieTienda {
+            padding: 3px;
+            width: 25%;
+        }
+        .pieCuenta {
+            padding: 3px;
+            width: 25%;
+        }
+        .pieProductos {
+            padding: 3px;
+            width: 25%;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }      
+        .dropdown-content {
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+            width: 100%;
+            z-index: 1;
+        }  
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .pieLista {
+            list-style-type: none;
+            padding: 0px;
+        
+            li a {
+                text-decoration: none;
+                color: $colorTxtLinkHover;
+            }
+            li a:hover {
+                color: $colorTxtLink;
+            }
+        }
+    }  
+}

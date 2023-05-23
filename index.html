@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kupsa, inicio, habitacion, ambiente, sueño, dormitorio, cama, veladore, banqueta">
+    <meta name="description" content="Tu dormitorio, tu ambiente, en tus sueños, los muebles que necesitas">
+    <link rel="shortcut icon" href="./imagenes/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Kupsa</title>
+</head>
+<body>
+    <header class="lineaAbajo">
+        <!--Estructura cabecera-->
+        <div class="cabGrid">
+
+            <!--Contacto-->
+            <div class="contacto">
+                <div class="rrss">
+                    <ul class="list-inline m-0 p-0 rrss__items">
+                        <li class="list-inline-item m-1 p-0 rrss__items__item">
+                            <a href="https://es-la.facebook.com/" target="_blank">
+                                <i class="bi bi-facebook rrss__iconoSmall"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-1 p-0 rrss__items__item">
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="bi bi-instagram rrss__iconoSmall"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-1 p-0 rrss__items__item">
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <i class="bi bi-linkedin rrss__iconoSmall"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-1 p-0 rrss__items__item">
+                            <a href="https://www.pinterest.com/" target="_blank">
+                                <i class="bi bi-pinterest rrss__iconoSmall"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-1 p-0">
+                            <p class="rrss__iconoSmall">
+                                <i class="bi bi-envelope-at m-1 rrss__iconoNoLink"></i>contacto@kupsa.cl
+                            </p>
+                        </li>
+                        <li class="list-inline-item m-1 p-0">
+                            <p class="rrss__iconoSmall">
+                                <i class="bi bi-telephone m-1 rrss__iconoNoLink"></i>+56 9 4654 9972
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Logo-->
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./imagenes/logo_nombre.png" alt="Logo" title="Kupsa">
+                </a>
+            </div>
+
+            <!--Menu-->
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu__opciones">
+                                <li class="nav-item menu__opciones__opcion">
+                                    <a class="nav-link scale" aria-current="page" href="./index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item menu__opciones__opcion">
+                                    <a class="nav-link scale" href="./page/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item menu__opciones__opcion">
+                                    <a class="nav-link scale" href="./page/productos.html">Productos</a>
+                                </li>
+                                <li class="nav-item menu__opciones__opcion">
+                                    <a class="nav-link scale" href="./page/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
+                                <button class="btn btn-outline-success btnSubmit" type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <!--Cuenta-->
+            <div class="cuenta">
+                <ul class="list-inline m-0 p-0 menu__opciones">
+                    <li class="list-inline-item m-1 p-0 menu__opciones__opcion">
+                        <a href="#" title="Mi cuenta">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item m-1 p-0 menu__opciones__opcion">
+                        <a href="#" title="Carrito">
+                            <i class="bi bi-cart-fill"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item m-1 p-0 menu__opciones__opcion">
+                        <a href="#" title="Lista deseos">
+                            <i class="bi bi-postcard-heart-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--Miga de pan-->
+        <section class="m-1">
+            <ul class="migaPan">
+                <li>Inicio</li>
+            </ul>
+        </section>
+
+        <!--Carrusel-->
+        <section>
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-md-12">
+                        <div id="carouselExampleCaptions" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="./imagenes/iwood-R5v8Xtc0ecg-unsplash v1.1.jpg" class="d-block w-100" alt="Dormitorio iwood" title="Dormitorio iwood">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h1>tu dormitorio</h1>
+                                  <p> </p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./imagenes/chastity-cortijo-R-w5Q-4Mqm0-unsplash v1.2.jpg" class="d-block w-100" alt="Dormitorio chastity" title="Dormitorio chastity">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h1>tu ambiente</h1>
+                                  <p> </p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./imagenes/spacejoy-XM-miHibz64-unsplash v1.1.jpg" class="d-block w-100" alt="Dormitorio spacejoy" title="Dormitorio spacejoy">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h1>en tus sueños</h1>
+                                  <p> </p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Siguiente</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Tarjetas de categorias-->
+        <section class="secCategorias">
+            <h2 class="sec__titulo"><strong>tenemos los muebles para tu dormitorio</strong></h2>
+            <div class="trjs__categorias">
+                <div class="trj__categoria trj__baseCama">
+                    <a href="./page/bases_cama.html"><h2 class="trj__titulo__categoria">Camas</h2></a>
+                </div>
+                <div class="trj__categoria trj__veladores">
+                    <a href="./page/veladores.html"><h2 class="trj__titulo__categoria">Veladores</h2></a>
+                </div>
+                <div class="trj__categoria trj__banquetas">
+                    <a href="./page/banquetas.html"><h2 class="trj__titulo__categoria">Banquetas</h2></a>
+                </div>             
+            </div>
+        </section>
+
+        <!--Caracteristicas-->
+        <section class="secCaracteristicas">
+            <h2 class="sec__titulo"><strong>compra con confianza</strong></h2>
+            <div class="trjs__caracteristicas">
+                <div class="trj__caracteristica">
+                    <!--Tienda online-->
+                    <h5 class="trj__caracteristica__titulo">
+                        <i class="bi bi-bag-fill icono__caracteristica"></i>Tienda Online
+                    </h5>
+                    <p>Podrás comprar donde quieras cuando quieras.</p>
+                </div>
+                <div class="trj__caracteristica">
+                    <!--Metodos de pago-->
+                    <h5 class="trj__caracteristica__titulo">
+                        <i class="bi bi-file-lock-fill icono__caracteristica"></i>Metodos de Pago
+                    </h5>
+                    <p>Amplia gama de metodos de pago seguros, para tu tranquilidad.</p>
+                </div>
+                <div class="trj__caracteristica">
+                    <!--Despacho-->
+                    <h5 class="trj__caracteristica__titulo">
+                        <i class="bi bi-rocket-takeoff-fill icono__caracteristica"></i>Despacho
+                    </h5>
+                    <p>Despachamos de tu compra, para que llegue a tu dirección.</p>
+                </div>
+                <div class="trj__caracteristica">
+                    <!--Politica de devolución-->
+                    <h5 class="trj__caracteristica__titulo">
+                        <i class="bi bi-arrow-counterclockwise icono__caracteristica"></i>Politica de devolución
+                    </h5>
+                    <p>No te gusto el producto? Lo puedes devolver.</p>
+                </div>
+            </div>
+        </section>   
+        
+        <!--Tarjetas de productos-->
+        <section class="secProductos">
+            <h2 class="sec__titulo"><strong>algunos muebles</strong></h2>
+            <div class="trjs__productos">
+                <div class="trj__producto">
+                    <a class="scale" href="./page/producto.html" title="Ver detalle">
+                        <img class="imgAnchoTotal" src="./imagenes/base_cama_especial.png" alt="Base cama especial">
+                    </a>
+                    <h5 class="trj__producto__titulo">Base cama especial</h5>
+                    <h5 class="trj__producto__titulo"><strong>$54.990</strong></h5>
+                    <div class="trj__producto__iconos">
+                        <a href="./page/producto.html" title="Ver detalle"><i class="bi bi-eye-fill icono__producto"></i></i></a>
+                        <a href="#" title="Lista deseos"><i class="bi bi-heart-fill icono__producto"></i></a>
+                        <a href="#" title="Sumar al carro"><i class="bi bi-cart-fill icono__producto"></i></a>
+                    </div>
+                </div>
+                <div class="trj__producto">
+                    <a class="translate" href="./page/producto.html" title="Ver detalle">
+                        <img class="imgAnchoTotal" src="./imagenes/velador_patas.png" alt="Velador patas">
+                    </a>
+                    <h5 class="trj__producto__titulo">Velador patas</h5>
+                    <h5 class="trj__producto__titulo"><strong>$54.990</strong></h5>
+                    <div class="trj__producto__iconos">
+                        <a href="./page/producto.html" title="Ver detalle"><i class="bi bi-eye-fill icono__producto"></i></i></a>
+                        <a href="#" title="Lista deseos"><i class="bi bi-heart-fill icono__producto"></i></a>
+                        <a href="#" title="Sumar al carro"><i class="bi bi-cart-fill icono__producto"></i></a>
+                    </div>
+                </div>
+                <div class="trj__producto">
+                    <a class="scale" href="./page/producto.html" title="Ver detalle">
+                        <img class="imgAnchoTotal" src="./imagenes/banqueta_rejillas.png" alt="Banqueta rejillas">
+                    </a>
+                    <h5 class="trj__producto__titulo">Banqueta rejillas</h5>
+                    <h5 class="trj__producto__titulo"><strong>$54.990</strong></h5>
+                    <div class="trj__producto__iconos">
+                        <a href="./page/producto.html" title="Ver detalle"><i class="bi bi-eye-fill icono__producto"></i></i></a>
+                        <a href="#" title="Lista deseos"><i class="bi bi-heart-fill icono__producto"></i></a>
+                        <a href="#" title="Sumar al carro"><i class="bi bi-cart-fill icono__producto"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>     
+    </main>
+
+    <footer class="lineaArriba">
+        <div class="pieGrid">
+            <!--1 Imagen-->
+            <div class="pieImagen">
+                <a href="./index.html">
+                    <img src="./imagenes/logo_nombre.png" alt="Logo" title="Kupsa">
+                </a>
+            </div>
+
+            <!--2 Texto-->
+            <div class="pieTexto">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ducimus nisi tempore quae 
+                    deserunt dolor ipsa optio nostrum animi illo.</p>
+ 
+                 <div class="rrss">
+                     <ul class="list-inline m-0 p-0 rrss__items">
+                         <li class="list-inline-item m-1 p-0 rrss__items__item">
+                             <a href="https://es-la.facebook.com/" target="_blank">
+                                 <i class="bi bi-facebook rrss__iconoLarge"></i>
+                             </a>
+                         </li>
+                         <li class="list-inline-item m-1 p-0 rrss__items__item">
+                             <a href="https://www.instagram.com/" target="_blank">
+                                 <i class="bi bi-instagram rrss__iconoLarge"></i>
+                             </a>
+                         </li>
+                         <li class="list-inline-item m-1 p-0 rrss__items__item">
+                             <a href="https://www.linkedin.com/" target="_blank">
+                                 <i class="bi bi-linkedin rrss__iconoLarge"></i>
+                             </a>
+                         </li>
+                         <li class="list-inline-item m-1 p-0 rrss__items__item">
+                             <a href="https://www.pinterest.com/" target="_blank">
+                                 <i class="bi bi-pinterest rrss__iconoLarge"></i>
+                             </a>
+                         </li>
+                     </ul>
+                 </div> 
+            </div>
+
+            <!--Empresa Tienda Cuenta Productos-->
+            <div class="pieDetalles">
+                <!--3 Empresa-->
+                <div class="pieEmpresa">
+                    <div class="dropdown">
+                        <h3>Empresa</h3>
+                        <div class="dropdown-content">
+                            <ul class="pieLista">
+                                <li><a href="#">Terminos y condiciones</a></li>
+                                <li><a href="#">Despacho</a></li>
+                                <li><a href="./page/nosotros.html">Quienes Somos</a></li>
+                                <li><a href="./page/contacto.html">Contacto</a></li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div>
+
+                <!--4 Tienda-->
+                <div class="pieTienda">
+                    <div class="dropdown">
+                        <h3>Tienda</h3>
+                        <div class="dropdown-content">
+                            <ul class="pieLista">
+                                <li>Kupsa</li>
+                                <li>Santiago, Chile</li>
+                                <li><i class="bi bi-geo-alt me-2"></i>Av. Los Alerces 666</li>                
+                                <li><i class="bi bi-telephone me-2"></i>+56 9 3216 9854</li>
+                                <li><i class="bi bi-envelope-at me-2"></i>contacto@kupsa.cl</li>
+                            </ul> 
+                        </div>
+                    </div>                
+                </div> 
+                
+                <!--5 Cuenta-->
+                <div class="pieCuenta">
+                    <div class="dropdown">
+                        <h3>Cuenta</h3>
+                        <div class="dropdown-content">
+                            <ul class="pieLista">
+                                <li><a href="#">Información personal</a></li>
+                                <li><a href="#">Pedidos</a></li>
+                                <li><a href="#">Despacho</a></li>
+                                <li><a href="#">Devoluciones</a></li>
+                                <li><a href="#">Notas de crédito</a></li>
+                                <li><a href="#">Direcciones</a></li>
+                            </ul> 
+                        </div>
+                    </div>                   
+                </div> 
+                
+                <!--6 Productos-->
+                <div class="pieProductos">
+                    <div class="dropdown">
+                        <h3>Productos</h3>
+                        <div class="dropdown-content">
+                            <ul class="pieLista">
+                                <li><a href="./page/bases_cama.html">Camas</a></li>
+                                <li><a href="./page/veladores.html">Veladores</li></a>
+                                <li><a href="./page/banquetas.html">Banquetas</a></li>
+                                <li><a href="./page/productos.html">Todos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>          
+</body>
+</html>

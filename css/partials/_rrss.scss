@@ -1,0 +1,36 @@
+/*--Redes sociales--*/
+/********************/
+.rrss {
+    .rrss__iconoSmall {
+        font-size: small;
+    }
+    .rrss__iconoMedium {
+        font-size: medium;
+    }
+    .rrss__iconoLarge {
+        font-size: large;
+    }
+    .rrss__iconoXLarge {
+        font-size: x-large;
+    }
+    .rrss__iconoNoLink {
+        color: $colorTxtLinkHover;
+    }
+    .rrss__items {
+        list-style-type: none; 
+     
+        .rrss__items__item {    
+            text-align:center;
+            font-weight:bold;
+            color:$colorTxtLink;
+        }
+        .rrss__items__item a {
+            text-decoration:none;
+            color:inherit;
+        }
+        .rrss__items__item a:hover {
+            background-color:#fff;
+            color:$colorTxtLinkHover;
+        }
+    }       
+}

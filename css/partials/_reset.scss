@@ -1,0 +1,26 @@
+/*--Seteo inicial--*/
+/*******************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: $estiloFont;
+    font-family: $familiaFont;
+}
+
+body {
+    margin-left: $marCuerpoIzq;
+    margin-right: $marCuerpoDer;
+}
+footer {
+    margin-top: 100px;
+}
+
+.lineaAbajo {
+    border-bottom: $linea;
+}
+.lineaArriba {
+    border-top: $linea;
+}
+
+

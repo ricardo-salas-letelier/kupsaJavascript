@@ -1,0 +1,49 @@
+/*--Cuerpo productos--*/
+/**********************/
+.secProducts {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+    "divCategorias divView"
+    "divCategorias divProductos";    
+    grid-template-columns: 2fr 10fr;
+    justify-content: start;
+    align-items:start;
+    row-gap: 5px;
+
+    .divCategorias {
+        grid-area: divCategorias;
+        position: fixed;
+
+        .divCategorias__lista {
+            list-style-type: none;
+        
+            li a {
+                text-decoration: none;
+                color: $colorTxtLink;
+            }
+            li a:hover {
+                color: $colorTxtLinkHover;
+            }
+        } 
+    }
+    .divView {
+        grid-area: divView;
+    
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .divProductos {
+        grid-area: divProductos;
+
+        .divProductos__justificacion {
+            justify-content: stretch;
+        }
+        .divProductos__marco {
+            border: $linea;
+            border-radius: 7px; 
+        }
+    }
+}

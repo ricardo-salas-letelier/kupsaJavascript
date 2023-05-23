@@ -1,0 +1,85 @@
+/*--Cabecera--*/
+/**************/
+.cabGrid {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+    "contacto contacto contacto"
+    "logo     menu     cuenta";    
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: stretch;
+    align-items:center;
+
+    .logo {
+        grid-area: logo;
+        width: 80px;
+
+        & img {
+            width: 100%;
+            padding: 1%;
+        }
+    }
+    .contacto {
+        grid-area: contacto;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: end;
+        align-items: center;
+    }
+    .menu {
+        grid-area: menu;
+
+        .menu__opciones {
+            list-style-type: none;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        
+            .menu__opciones__opcion {
+                text-align:center;
+                font-weight:bold;
+                color:$colorTxtLink;
+            }
+            .menu__opciones__opcion a {
+                text-decoration:none;
+                color:inherit;
+                font-size:18px;
+            }
+            .menu__opciones__opcion a:hover{
+                //background-color:#fff;
+                color:$colorTxtLinkHover;
+            }
+        }
+    }
+    .cuenta {
+        grid-area: cuenta;
+
+        .menu__opciones {
+            list-style-type: none;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: end;
+        
+            .menu__opciones__opcion {
+                text-align:center;
+                font-weight:bold;
+                color:$colorTxtLink;
+            }
+            .menu__opciones__opcion a {
+                text-decoration:none;
+                color:inherit;
+                font-size:24px;
+            }
+            .menu__opciones__opcion a:hover{
+                background-color:#fff;
+                color:$colorTxtLinkHover;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/*--Miga de pan--*/
+/*****************/
+.migaPan {
+    font-size: small;
+    list-style-type: none;
+    padding: 0px;
+
+    li {
+        display: inline;
+
+        a {
+            text-decoration: none;
+            color: $colorTxtLink;
+        }
+        a:hover {
+            color: $colorTxtLinkHover;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/*--Cuerpo contacto--*/
+/*********************/
+.secContacto {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+    "hagamos contactenos";  
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    align-content: start;
+    column-gap: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+
+    .hagamos {
+        grid-area: hagamos;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: $linea;
+        border-radius: 7px;
+
+        .hagamos__item {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            margin-left: 10px;
+
+            .hagamos__item__icono {
+                margin-right: 5px;
+                font-size: large;
+                color:$colorTxtLinkHover;
+            }
+        }
+    }
+    .contactenos {
+        grid-area: contactenos;
+        border: $linea;
+        border-radius: 7px;        
+        padding-right: 0px;
+    }
+    .contacto__titulo {
+        font-weight: bold;
+    }
+}

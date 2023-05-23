@@ -1,0 +1,162 @@
+/*--@media query--*/
+/**********************/
+@media screen and (max-width: 1024px) {
+    .pieGrid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .pieDetalles {
+            width: 100%;
+        }
+    }
+    
+    .trjs__categorias {
+        .trj__categoria {
+            height: calc(300px * 0.7);
+        }
+    }
+}
+
+@mixin ajusteListaPie($ancho,$caracter) {
+    @each $item in pieEmpresa, pieTienda, pieCuenta, pieProductos {
+        .#{$item} {
+            width: $ancho;
+            h3 {
+                color: $colorTxtLink;
+                &:hover {
+                    color: $colorTxtLinkHover;  
+                }
+            }
+            h3::after {
+                content: $caracter;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pieGrid {
+        .dropdown {
+            .dropdown-content {
+                display: none;
+            }
+        }
+        
+        .pieDetalles {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @include ajusteListaPie(60%,"  ≡");
+
+            .dropdown-content {
+                border: $linea;
+                border-radius: 2px;
+            }  
+            .dropdown-content {
+                ul {
+                    li {
+                        margin-left: 5px;
+                    }
+                }
+            }           
+        }       
+    } 
+
+    .trjs__categorias {
+        flex-direction: column;
+        .trj__categoria {
+            height: 350px;
+            width: 80%;
+        }
+    }
+    .secNosotros {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .secContacto {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .hagamos {
+            width: 100%;
+        }
+    }
+    .secProducts .divCategorias {
+        display: none;
+    }
+    .producto__justificacion {
+        justify-content: center;
+    }
+    .pieImagen {
+        order: 1;
+    }
+    .pieTexto {
+        order: 2
+    }
+    .pieProductos {
+        order: 3;
+    }
+    .pieCuenta {
+        order: 4;
+    }
+    .pieEmpresa {
+        order: 5;
+    }
+    .pieTienda {
+        order: 6;
+    }
+    .navTabTxt {
+        font-size: large;
+    }
+}
+@media screen and (max-width: 555px) {
+    .trjs__categorias {
+        flex-direction: column;
+        .trj__categoria {
+            height: 300px;
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .trjs__categorias {
+        flex-direction: column;
+        .trj__categoria {
+            height: 200px;
+            width: 80%;
+        }
+    }
+    .pieGrid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: stretch;
+    }
+    .secNosotros {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .secEquipo .trjs__equipo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;  
+    }
+    .secUnProducto {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navTabTxt {
+        font-size: medium;
+    }
+}

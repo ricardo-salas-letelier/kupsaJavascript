@@ -1,0 +1,78 @@
+/*--Cuerpo producto--*/
+/*********************/
+.secUnProducto {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+    "divUnProductoImg divUnProductoTxt";  
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    align-items:center;
+    column-gap: 50px;
+
+    .divUnProductoImg {
+        grid-area: divUnProductoImg;
+
+        img {
+            width: 100%;
+        }
+        .divUnProductoImg__chicas {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding-top: 30px;
+
+            .divUnProductoImg__chica {
+                width: 80px;
+                border: #e7e7e7 solid 1px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .divUnProductoTxt {
+        grid-area: divUnProductoTxt;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .porCaja {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+
+            .porCaja__cantidad {
+                position: relative;
+                padding:3px;
+                margin: 0 5px 0 5px;
+                width:55px;
+                height: 40px;
+                border: #737272 solid 1px;  
+            }
+        }
+    }
+}
+
+.producto__justificacion {
+    justify-content: stretch;
+}
+.producto__marco {
+    border: $linea;
+    border-radius: 7px; 
+}
+.navTabTxt {
+    font-size: large;
+    color: $colorTxtLink;
+}
+.navTabTxt:hover{
+    color:$colorTxtLinkHover;
+}
