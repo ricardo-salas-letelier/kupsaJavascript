@@ -1,0 +1,31 @@
+/*--Cuerpo carrito--*/
+/**********************/
+.secCarrito {
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-areas:
+	"divTitulo divTitulo"
+    "divLista  divResumen";    
+    grid-template-columns: 5fr 3fr;
+    justify-content: start;
+    align-items:start;
+    row-gap: 5px;
+
+    .divTitulo {
+        grid-area: divTitulo;
+    }
+    .divLista {
+        grid-area: divLista;
+		
+        display: flex;
+        flex-direction: row;
+    }
+    .divResumen {
+        grid-area: divResumen;
+    
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
