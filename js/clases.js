@@ -2,7 +2,7 @@
 class mueble {
     codigo = ""
     nombre = ""
-    precio = ""
+    precio = 0
     cantidad = 0
     imagen = ""
     categoria = ""
@@ -14,6 +14,26 @@ class mueble {
         this.cantidad = cantidad
         this.imagen = imagen
         this.categoria = categoria
+    }
+
+    sumarProducto(cantidad) {
+        if (this.cantidad + cantidad >= 0) {
+            this.cantidad = this.cantidad + cantidad
+        } else {
+            this.cantidad = 0
+        }
+    }
+
+    getNombre() {
+        return this.nombre
+    }
+
+    getCantidad() {
+        return this.cantidad
+    }
+
+    getPrecio() {
+        return this.precio
     }
 }
 

@@ -5,27 +5,41 @@
 
     display: grid;
     grid-template-areas:
-	"divTitulo divTitulo"
-    "divLista  divResumen";    
+	"divTituloLista divTituloResumen"
+    "divLista       divResumen";    
     grid-template-columns: 5fr 3fr;
     justify-content: start;
     align-items:start;
     row-gap: 5px;
 
-    .divTitulo {
-        grid-area: divTitulo;
+    .divTituloLista {
+        grid-area: divTituloLista;
+        margin-right: 50px;
     }
     .divLista {
         grid-area: divLista;
 		
         display: flex;
         flex-direction: row;
+        margin-right: 50px;
+
+        .anchoLinea {
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+    }
+    .divTituloResumen {
+        grid-area: divTituloResumen;
+        margin-left: 50px;
     }
     .divResumen {
         grid-area: divResumen;
     
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        margin-left: 50px;
+    }
+    .montos {
+        text-align: right;
     }
 }

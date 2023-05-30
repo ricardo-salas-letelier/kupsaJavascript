@@ -1,14 +1,41 @@
 // Inicializa con los valores la pagina
 function inicializa() {
+    // Sacar de localStorage
+    llenarProductosDesdeLocalStorage("deseos", listaDeseos)
+    llenarProductosDesdeLocalStorage("carrito", listaCarrito)
+
     // Pintar el HTML
     let filtro = muebles.consultarMueblesPorCategoria("todo")
     pintarProductos(filtro)
+    // Habilitar escuchadores
     habilitaEscuchadorAgregarDeseo()
     habilitaEscuchadorAgregarCarrito()
     habilitaEscuchadoresPorCategoria()
     habilitaEscuchadorPorPalabra()
+
     actualizarNumeroDeseos()
     actualizarNumeroCarrito()
+}
+
+// Sacar de localStorage lista
+function llenarProductosDesdeLocalStorage(clave, prds) {
+    let list = localStorage.getItem(clave)
+
+    // Cargar productos desde JSON
+    let listJSON = JSON.parse(list)
+    // Si lista esta con 1 o más productos
+    if (listJSON != null) {
+        // Borrar elementos de lista
+        prds.lista.splice(0, prds.lista.length)
+
+        // Llenar lista de productos
+        for (const item of listJSON) {
+            let obj = new mueble(item.codigo,item.nombre,item.precio,item.cantidad,item.imagen,item.categoria)
+            if (!prds.agregarMueble(obj)) {
+                console.log("ERROR. Producto ya existe. Código: "+item.codigo)
+            }
+        }
+    }
 }
 
 // Pinta los productos en la pantalla
@@ -25,7 +52,7 @@ function pintarProductos(lst) {
             <img src=${item.imagen} alt=${item.nombre}>
         </a>
         <h5 class="trj__producto__titulo">${item.nombre}</h5>
-        <h5 class="trj__producto__titulo"><strong>${item.precio}</strong></h5>
+        <h5 class="trj__producto__titulo"><strong>${item.precio.toLocaleString('cl-CL', { style: 'currency', currency: 'CLP' })}</strong></h5>
         <div class="trj__producto__iconos">
             <a href="../page/producto.html" title="Ver detalle"><i class="bi bi-eye-fill icono__producto"></i></i></a>
             <a href="#" id=${item.codigo} class="sumarDeseo" title="Lista deseos"><i class="bi bi-heart-fill icono__producto"></i></a>
@@ -47,11 +74,25 @@ function actualizarListaDeseo(codigo) {
 // Sumar producto a la lista de deseos
 function sumarListaDeseo(codigo) {
     // Busco mueble en la lista muebles
-    prd = muebles.buscarMueble(codigo)
+    let prd = muebles.buscarMueble(codigo)
     // Si existe mueble
     if (prd != null) {
-        listaDeseos.agregarMueble(prd)
-        listaDeseos.mostrarMuebles()
+        // Existe en lista de deseos
+        let indice = listaDeseos.existeMueble(codigo)
+        // Si no existe en lista de deseo
+        if (indice < 0) {
+            // Crear mueble
+            let obj = new mueble(prd.codigo,prd.nombre,prd.precio,0,prd.imagen,prd.categoria)  
+            listaDeseos.agregarMueble(obj)
+            indice = listaDeseos.existeMueble(codigo)
+            listaDeseos.lista[indice].sumarProducto(1)
+            listaDeseos.mostrarMuebles()
+        } else {
+            listaDeseos.lista[indice].sumarProducto(1)
+            listaDeseos.mostrarMuebles()
+        }
+        // Guardar productos en localStorage
+        guardarProductosEnLocalStorage("deseos", listaDeseos)
     } else {
         console.log("ERROR. Producto con código: "+codigo+", no exite")
     }
@@ -60,7 +101,8 @@ function sumarListaDeseo(codigo) {
 // Modificar numero de productos de lista de deseos
 function actualizarNumeroDeseos() {
     item = document.getElementById("nroDeseos")
-    item.innerText = listaDeseos.lista.length
+    let acum = listaDeseos.lista.reduce((acumulador, elemento) => acumulador + elemento.cantidad, 0)
+    item.innerText = acum
 }
 
 // Sumar producto al carrito
@@ -73,12 +115,26 @@ function actualizarCarrito(codigo) {
 
 // Sumar producto al carrito
 function sumarCarrito(codigo) {
-    // Busco mueble en la lista muebles
-    prd = muebles.buscarMueble(codigo)
+    // Busco mueble en la lista carrito
+    let prd = muebles.buscarMueble(codigo)
     // Si existe mueble
     if (prd != null) {
-        listaCarrito.agregarMueble(prd)
-        listaCarrito.mostrarMuebles()
+        // Existe en lista de carrito
+        let indice = listaCarrito.existeMueble(codigo)
+        // Si no existe en lista de deseo
+        if (indice < 0) {
+            // Crear mueble
+            let obj = new mueble(prd.codigo,prd.nombre,prd.precio,0,prd.imagen,prd.categoria)
+            listaCarrito.agregarMueble(obj)
+            indice = listaCarrito.existeMueble(codigo)
+            listaCarrito.lista[indice].sumarProducto(1)
+            listaCarrito.mostrarMuebles()
+        } else {
+            listaCarrito.lista[indice].sumarProducto(1)
+            listaCarrito.mostrarMuebles()
+        }
+        // Guardar productos en localStorage
+        guardarProductosEnLocalStorage("carrito", listaCarrito)
     } else {
         console.log("ERROR. Producto con código: "+codigo+", no exite")
     }
@@ -87,7 +143,14 @@ function sumarCarrito(codigo) {
 // Modificar numero de productos en carrito
 function actualizarNumeroCarrito() {
     item = document.getElementById("nroCarrito")
-    item.innerText = listaCarrito.lista.length
+    let acum = listaCarrito.lista.reduce((acumulador, elemento) => acumulador + elemento.cantidad, 0)
+    item.innerText = acum
+}
+
+// Guardar lista productos en localStorage
+function guardarProductosEnLocalStorage(clave,prds) {
+    let listJSON = JSON.stringify(prds.lista)
+    localStorage.setItem(clave, listJSON);
 }
 
 // Control de eventos y funciones para filtrar productos por categoria

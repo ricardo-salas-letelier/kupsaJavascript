@@ -584,6 +584,45 @@ footer {
   border-radius: 7px;
 }
 
+/*--Cuerpo carrito--*/
+/**********************/
+.secCarrito {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-areas: "divTituloLista divTituloResumen" "divLista       divResumen";
+  grid-template-columns: 5fr 3fr;
+  justify-content: start;
+  align-items: start;
+  row-gap: 5px;
+}
+.secCarrito .divTituloLista {
+  grid-area: divTituloLista;
+  margin-right: 50px;
+}
+.secCarrito .divLista {
+  grid-area: divLista;
+  display: flex;
+  flex-direction: row;
+  margin-right: 50px;
+}
+.secCarrito .divLista .anchoLinea {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.secCarrito .divTituloResumen {
+  grid-area: divTituloResumen;
+  margin-left: 50px;
+}
+.secCarrito .divResumen {
+  grid-area: divResumen;
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+.secCarrito .montos {
+  text-align: right;
+}
+
 /*--Cuerpo producto--*/
 /*********************/
 .secUnProducto {
