@@ -44,4 +44,3 @@ function habilitaEscuchadorPorPalabra() {
     let palabra = document.getElementById("campoBusqueda");
     formularioBusqueda.addEventListener("submit", (event) => {filtrarPorPalabra(event, palabra.value); formularioBusqueda.reset()})
 }
-

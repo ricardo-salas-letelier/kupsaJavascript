@@ -1,3 +1,22 @@
+// Cargar muebles en lista muebles
+function cargarProductos() {
+    // Leer archivo json
+    const file = "../json/productos.json";
+    fetch(file)
+        .then(respuesta =>  respuesta.json())
+        .then((prds) => {
+            // Llenar lista de productos
+            for (const item of prds) {
+                let obj = new mueble(item.codigo,item.nombre,item.precio,item.cantidad,item.imagen,item.categoria)
+                if (!muebles.agregarMueble(obj)) {
+                    console.log("ERROR. Producto ya existe. Código: "+item.codigo)
+                }
+            }
+            inicializa()
+        })
+        .catch(error => console.log("ERROR. Problemas al cargar productos", error))
+}
+
 // Inicializa con los valores la pagina
 function inicializa() {
     // Sacar de localStorage
@@ -69,6 +88,11 @@ function actualizarListaDeseo(codigo) {
     sumarListaDeseo(codigo)
     // Modificar numero de productos
     actualizarNumeroDeseos()
+
+    Toastify({
+        text: "Agrego producto a lista de deseos",
+        duration: 2000
+    }).showToast();
 }
 
 // Sumar producto a la lista de deseos
@@ -111,6 +135,11 @@ function actualizarCarrito(codigo) {
     sumarCarrito(codigo)
     // Modificar numero de productos
     actualizarNumeroCarrito()
+
+    Toastify({
+        text: "Agrego producto al carrito",
+        duration: 2000
+    }).showToast();
 }
 
 // Sumar producto al carrito
@@ -121,7 +150,7 @@ function sumarCarrito(codigo) {
     if (prd != null) {
         // Existe en lista de carrito
         let indice = listaCarrito.existeMueble(codigo)
-        // Si no existe en lista de deseo
+        // Si no existe en lista carrito
         if (indice < 0) {
             // Crear mueble
             let obj = new mueble(prd.codigo,prd.nombre,prd.precio,0,prd.imagen,prd.categoria)
@@ -207,4 +236,4 @@ function filtrarPorPalabra(e,pal) {
     habilitaEscuchadorAgregarCarrito()
 }
 
-inicializa()
+cargarProductos()

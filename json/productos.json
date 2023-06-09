@@ -1,0 +1,13 @@
+[{"codigo":"100","nombre":"Base cama especial","precio":54990,"cantidad":0,"imagen":"../imagenes/base_cama_especial.png","categoria":"cama"},
+ {"codigo":"200","nombre":"Velador patas","precio":54989,"cantidad":0,"imagen":"../imagenes/velador_patas.png","categoria":"velador"},
+ {"codigo":"300","nombre":"Banqueta rejillas","precio":54988,"cantidad":0,"imagen":"../imagenes/banqueta_rejillas.png","categoria":"banqueta"},
+ {"codigo":"400","nombre":"Base de cama simple","precio":30990,"cantidad":0,"imagen":"../imagenes/base_cama_simple.png","categoria":"cama"},
+ {"codigo":"500","nombre":"Banqueta cajón","precio":24990,"cantidad":0,"imagen":"../imagenes/banqueta_cajon.png","categoria":"banqueta"},
+ {"codigo":"600","nombre":"Velador horizontal","precio":30989,"cantidad":0,"imagen":"../imagenes/velador_hrozontal.png","categoria":"velador"},
+ {"codigo":"700","nombre":"Base cama madera","precio":25900,"cantidad":0,"imagen":"../imagenes/base_cama_madera.png","categoria":"cama"},
+ {"codigo":"800","nombre":"Banqueta masisa","precio":54987,"cantidad":0,"imagen":"../imagenes/banqueta_masisa.png","categoria":"banqueta"},
+ {"codigo":"900","nombre":"Velador librero","precio":45900,"cantidad":0,"imagen":"../imagenes/velador_librero.png","categoria":"velador"},
+ {"codigo":"1000","nombre":"Base cama línea recta","precio":74990,"cantidad":0,"imagen":"../imagenes/base_cama_linea_recta.png","categoria":"cama"},
+ {"codigo":"1100","nombre":"Banqueta simple","precio":25989,"cantidad":0,"imagen":"../imagenes/banqueta_simples.png","categoria":"banqueta"},
+ {"codigo":"1200","nombre":"Velador maderistica","precio":74990,"cantidad":0,"imagen":"../imagenes/velador_maderistica.png","categoria":"velador"}
+]

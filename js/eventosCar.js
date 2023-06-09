@@ -9,6 +9,7 @@ function inicializa() {
     // Habilitar escuchadores
     habilitaEscuchadorDisminuirCarrito()
     habilitaEscuchadorAumentarCarrito()
+    habilitaEscuchadorPasarPorCaja()
     actualizarResumen(listaCarrito)
 }
 
@@ -133,6 +134,15 @@ function actualizarResumen(prds) {
 function eliminarLinea(codigo) {
     itemLinea = document.getElementById("linea"+codigo)
     itemLinea.remove()
+}
+
+function msgPasarPorCaja() {
+    Swal.fire({
+        title: 'gracias por su compra',
+        text: 'le hemos enviado por correo la factura n° '+Math.round(Math.random()*100000,0),
+        icon: 'success',
+        confirmButtonText: 'OK'
+    })
 }
 
 inicializa()

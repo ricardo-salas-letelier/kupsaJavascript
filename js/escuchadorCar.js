@@ -13,3 +13,8 @@ function habilitaEscuchadorAumentarCarrito() {
     }
 }
 
+function habilitaEscuchadorPasarPorCaja() {
+    let pasarPorCaja = document.getElementById("pasarPorCaja");
+    pasarPorCaja.addEventListener("click", () => {msgPasarPorCaja()})
+}
+
