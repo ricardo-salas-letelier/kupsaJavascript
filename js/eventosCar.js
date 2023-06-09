@@ -129,6 +129,14 @@ function actualizarResumen(prds) {
     itemImpuesto.innerText = `${impuesto.toLocaleString('cl-CL', { style: 'currency', currency: 'CLP' })}`
     let itemTotal = document.getElementById("Total")
     itemTotal.innerText = `${total.toLocaleString('cl-CL', { style: 'currency', currency: 'CLP' })}`
+
+    // Deshabilitar boton Pasar por caja
+    let pasarPorCaja = document.getElementById("pasarPorCaja")
+    if (total == 0) {
+        pasarPorCaja.disabled = true
+    } else {
+        pasarPorCaja.disabled = false
+    }
 }
 
 function eliminarLinea(codigo) {
