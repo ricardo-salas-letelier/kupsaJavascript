@@ -4,7 +4,7 @@ La funcionalidad desarrollada se puede observar en las siguientes paginas:
 * Opción de menú "Productos"
 * Opción carrito de compra, al extremo derecho del menu
 
-# Productos
+## Productos
 A través de esta página se pueden realizar las siguientes funcionalidades:
 * Sumar productos a carrito de compra
 * Sumar productos a lista de deseo (despliegue de lista de deseo, no esta implementada)
