@@ -5,6 +5,8 @@ La funcionalidad desarrollada se puede observar en las siguientes paginas:
    * Los productos desplegados son cargados desde archivo "productos.json"
 * Opción carrito de compra, al extremo derecho del menu
 
+Tanto el carrito como la listas de deseo se almacena en localStorage
+
 ## Productos
 A través de esta página se pueden realizar las siguientes funcionalidades:
 * Sumar productos a carrito de compra o lista de deseo
