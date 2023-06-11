@@ -2,7 +2,9 @@
 
 La funcionalidad desarrollada se puede observar en las siguientes paginas:
 * Opción de menú "Productos"
+   * Los productos desplegados son cargados desde archivo "productos.json"
 * Opción carrito de compra, al extremo derecho del menu
+
 
 ## Productos
 A través de esta página se pueden realizar las siguientes funcionalidades:
